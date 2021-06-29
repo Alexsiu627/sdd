@@ -5,7 +5,7 @@ confThreshold = 0.4
 
 cap = cv2.VideoCapture(0)
 
-# Create an empty list - classes[] and point the classesFile to 'coco80.names'
+# Create an empty list - classes[] and point the classesFile to 'names file'
 classesFile = 'your names file'
 classes = []
 # Load all classes in coco80.names into classes[]
@@ -14,7 +14,7 @@ with open(classesFile, 'r') as f:
     print(classes)
     print(len(classes))
 
-
+# Load the configuration and weights file
 net = cv2.dnn.readNetFromDarknet('your cfg file','your weights file')
 # Use OpenCV as backend and use CPU
 net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)

@@ -6,7 +6,7 @@ confThreshold = 0.4
 cap = cv2.VideoCapture(0)
 
 # Create an empty list - classes[] and point the classesFile to 'coco80.names'
-classesFile = 'coco2.names'
+classesFile = 'your names file'
 classes = []
 # Load all classes in coco80.names into classes[]
 with open(classesFile, 'r') as f:
@@ -15,7 +15,7 @@ with open(classesFile, 'r') as f:
     print(len(classes))
 
 
-net = cv2.dnn.readNetFromDarknet('custom-yolov4-detector.cfg','custom-yolov4-detector_best.weights')
+net = cv2.dnn.readNetFromDarknet('your cfg file','your weights file')
 # Use OpenCV as backend and use CPU
 net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
 net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
